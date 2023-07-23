@@ -10,7 +10,7 @@ Our product, RNG - Reviews & News in Gaming, consists of a platform where users 
 
 ### 1. Installation
 
-Link to the release with the final version of the source code in the group's git repository:  https://git.fe.up.pt/lbaw/lbaw2021/lbaw2143
+Link to the release with the final version of the source code in the group's git repository:  [https://github.com/CoDyPhin/FEUP-LBAW](https://github.com/CoDyPhin/FEUP-LBAW)
 
 To run the project image locally, simply run the following commands:
 
@@ -84,9 +84,9 @@ Input Validation can be found in the log in/sign up actions as well as in the cr
 
 ### 5. Check Accessibility and Usability
 
-[Accessibility](https://git.fe.up.pt/lbaw/lbaw2021/lbaw2143/-/blob/master/artifacts/Checklist_de_Acessibilidade_-_SAPO_UX.pdf)
+[Accessibility](https://github.com/CoDyPhin/FEUP-LBAW/blob/master/artifacts/Checklist_de_Acessibilidade_-_SAPO_UX.pdf)
 
-[Usability](https://git.fe.up.pt/lbaw/lbaw2021/lbaw2143/-/blob/master/artifacts/Checklist_de_Usabilidade_-_SAPO_UX.pdf)
+[Usability](https://github.com/CoDyPhin/FEUP-LBAW/blob/master/artifacts/Checklist_de_Usabilidade_-_SAPO_UX.pdf)
 
 
 
@@ -94,11 +94,11 @@ Input Validation can be found in the log in/sign up actions as well as in the cr
 
 The results of the validation of the HTML and CSS can be found here:
 
-[HTML Home Page](https://git.fe.up.pt/lbaw/lbaw2021/lbaw2143/-/blob/master/artifacts/home-validation.pdf)
+[HTML Home Page](https://github.com/CoDyPhin/FEUP-LBAW/blob/master/artifacts/home-validation.pdf)
 
-[HTML Thread Page](https://git.fe.up.pt/lbaw/lbaw2021/lbaw2143/-/blob/master/artifacts/thread-validation.pdf) 
+[HTML Thread Page](https://github.com/CoDyPhin/FEUP-LBAW/blob/master/artifacts/thread-validation.pdf) 
 
-[CSS](https://git.fe.up.pt/lbaw/lbaw2021/lbaw2143/-/blob/master/artifacts/css-validation.pdf)
+[CSS](https://github.com/CoDyPhin/FEUP-LBAW/blob/master/artifacts/css-validation.pdf)
 
 
 
