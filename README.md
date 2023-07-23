@@ -4,10 +4,10 @@ Designed to enhance the gamer life experience, RNG allows the gaming community t
 
 ## Project Components
 
-* [ER: Requirements Specification](er)
-* [EBD: Database Specification](ebd)
-* [EAP: Architecture Specification and Prototype](eap)
-* [PA: Product and Presentation](pa)
+* [ER: Requirements Specification](wiki/er.md)
+* [EBD: Database Specification](wiki/ebd.md)
+* [EAP: Architecture Specification and Prototype](wiki/eap.md)
+* [PA: Product and Presentation](wiki/pa.md)
 
 ## Artefacts Checklist
 
