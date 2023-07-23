@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title> RNG - Reviews & News In Gaming </title>
+
+    <!-- Bootstrap CSS file -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js" integrity="sha384-KsvD1yqQ1/1+IA7gi3P0tyJcT3vR+NdBTt13hSJ2lnve8agRGXTTyNaBYmCR/Nwi" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js" integrity="sha384-nsg8ua9HAw1y0W1btsyWgBklPnCUAFLuTMS2G72MMONqmOymq585AcH49TLBQObG" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://cdn.discordapp.com/attachments/579367639478960253/816085342116642906/rnglogo.png" width=100>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <div class="d-flex" style="position: relative; left: 2.5vw;">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#reviews">Reviews</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#news">News</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item" style="position: relative; left: 5vw; width: 25vw;">
+              <form action="search.html" method="post" >
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              </form>
+            </li>
+          </div>
+        </ul>
+        <form class="d-flex">
+          <div class="login-signup d-flex">
+            <button type="button" class="btn btn-outline-primary container-fluid" data-bs-toggle="modal" data-bs-target="#loginModal">Log In</button>
+            <button type="button" class="btn btn-primary container-fluid">Sign Up</button>
+          </div>
+        </form>
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header">
+                <div class="container-fluid">
+                  <div class="row"><h5 class="modal-title" style="font-size: x-large" id="exampleModalLabel">Log In</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                  <div class="row"><h6 class="small" style="font-size: small">By continuing, you agree to our User Agreement and Privacy Policy</h6></div>
+                </div>
+              </div>
+              <div class="modal-body">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="Username">
+                  <label for="floatingInput">Username</label>
+                </div>
+                <div class="form-floating">
+                  <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+                  <label for="floatingPassword">Password</label>
+                </div>
+              </div>
+              <div class="modal-footer d-flex justify-content-center">
+                <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button> -->
+                <div class="container-fluid">
+                  <div class="row mb-2">
+                    <button type="button" class="btn btn-lg btn-primary">Log In</button>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+                      <h6 class="small">New to RNG? <a href="./signup.html">Sign Up </a></h6>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col"><hr></div>
+                    <div class="col-auto">OR</div>
+                    <div class="col"><hr></div>
+                  </div>
+                  <div class="row mb-2"></div>
+                  <div class="row mb-2">
+                  <button type="button" class="btn btn-lg btn-outline-primary"><img src="https://cdn.iconscout.com/icon/free/png-256/google-231-432517.png" width="20em"></img> Sign In With Google</button>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <section class="posts-grid d-flex justify-content-center">
+    <div class ="post-content">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Top</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Recent</button>
+        </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <div class ="post-list d-flex flex-column">
+            <a class="text-decoration-none text-reset" href="threadpage.html">
+              <div class="thread-card">
+                <div class="card-grid">
+                  <div class="vote d-flex justify-content-center align-content-center">
+                    <div>
+                      <span class="material-icons d-flex justify-content-center">
+                        keyboard_arrow_up
+                      </span>
+                      <p class="d-flex justify-content-center">100</p>
+                      <span class="material-icons d-flex justify-content-center">
+                        keyboard_arrow_down
+                      </span>
+                    </div>
+                  </div>
+                  <div class="title">CyberPunk 2077 Review</div>
+                  <div class="text">Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. Assume the role of V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality.</div>
+                  <div class="buttons">
+                    <div class="comments">
+                      <span class="material-icons">
+                        mode_comment
+                      </span>
+                      <span class="full-icondescription">2 comments</span>
+                      <span class="short-icondescription">2</span>
+                    </div>
+                    <div class="postedby">
+                      <span class="material-icons">
+                        person
+                      </span>
+                      <span class="full-icondescription">Posted by CoDyPhin</span>
+                      <span class="short-icondescription">CoDyPhin</span>
+                    </div>
+                    <div class="time">
+                      <span class="material-icons">
+                        access_time
+                      </span>
+                      <span class="full-icondescription">3:35 PM  27/02/2021</span>
+                      <span class="short-icondescription">3:35 PM</span>
+                    </div>
+                  </div>
+                  <div class="image">
+                    <img src="cyberpunk.png" class=".figure-img">
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="text-decoration-none text-reset" href="threadpage.html">
+              <div class="thread-card">
+                <div class="card-grid">
+                  <div class="vote d-flex justify-content-center align-content-center">
+                    <div>
+                      <span class="material-icons d-flex justify-content-center">
+                        keyboard_arrow_up
+                      </span>
+                      <p class="d-flex justify-content-center">100</p>
+                      <span class="material-icons d-flex justify-content-center">
+                        keyboard_arrow_down
+                      </span>
+                    </div>
+                  </div>
+                  <div class="title">FIFA 21 REVIEW</div>
+                  <div class="text">On the street and in the stadium, FIFA 21 has more ways to play than ever before. FIFA 21 rewards you for your creativity and control all over the pitch. Create more scoring opportunities with all-new dynamic attacking systems in the most intelligent FIFA gameplay to date. A new Agile Dribbling system gives you the means to unleash your creativity in 1-on-1 situations. Use fast footwork, more responsive close control, and new skill moves like the ball roll fake to explode past defenders.</div>
+                  <div class="buttons">
+                    <div class="comments">
+                      <span class="material-icons">
+                        mode_comment
+                      </span>
+                      <span class="full-icondescription">2 comments</span>
+                      <span class="short-icondescription">2</span>
+                    </div>
+                    <div class="postedby">
+                      <span class="material-icons">
+                        person
+                      </span>
+                      <span class="full-icondescription">Posted by davidrocha9</span>
+                      <span class="short-icondescription">davidrocha9</span>
+                    </div>
+                    <div class="time">
+                      <span class="material-icons">
+                        access_time
+                      </span>
+                      <span class="full-icondescription">10:11 AM  27/02/2021</span>
+                      <span class="short-icondescription">10:11 AM</span>
+                    </div>
+                  </div>
+                  <div class="image">
+                    <img src="../assets/fifa.png" class=".figure-img">
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="text-decoration-none text-reset" href="threadpage.html">
+              <div class="thread-card">
+                <div class="card-grid">
+                  <div class="vote d-flex justify-content-center align-content-center">
+                    <div>
+                      <span class="material-icons d-flex justify-content-center">
+                        keyboard_arrow_up
+                      </span>
+                      <p class="d-flex justify-content-center">100</p>
+                      <span class="material-icons d-flex justify-content-center">
+                        keyboard_arrow_down
+                      </span>
+                    </div>
+                  </div>
+                  <div class="title">CyberPunk 2077 Review</div>
+                  <div class="text">Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. Assume the role of V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality.</div>
+                  <div class="buttons">
+                    <div class="comments">
+                      <span class="material-icons">
+                        mode_comment
+                      </span>
+                      <span class="full-icondescription">2 comments</span>
+                      <span class="short-icondescription">2</span>
+                    </div>
+                    <div class="postedby">
+                      <span class="material-icons">
+                        person
+                      </span>
+                      <span class="full-icondescription">Posted by CoDyPhin</span>
+                      <span class="short-icondescription">CoDyPhin</span>
+                    </div>
+                    <div class="time">
+                      <span class="material-icons">
+                        access_time
+                      </span>
+                      <span class="full-icondescription">3:35 PM  27/02/2021</span>
+                      <span class="short-icondescription">3:35 PM</span>
+                    </div>
+                  </div>
+                  <div class="image">
+                    <img src="assets/lol.png" class=".figure-img">
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a class="text-decoration-none text-reset" href="threadpage.html">
+              <div class="thread-card">
+                <div class="card-grid">
+                  <div class="vote d-flex justify-content-center align-content-center">
+                    <div>
+                      <span class="material-icons d-flex justify-content-center">
+                        keyboard_arrow_up
+                      </span>
+                      <p class="d-flex justify-content-center">100</p>
+                      <span class="material-icons d-flex justify-content-center">
+                        keyboard_arrow_down
+                      </span>
+                    </div>
+                  </div>
+                  <div class="title">CyberPunk 2077 Review</div>
+                  <div class="text">Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. Assume the role of V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality.</div>
+                  <div class="buttons">
+                    <div class="comments">
+                      <span class="material-icons">
+                        mode_comment
+                      </span>
+                      <span class="full-icondescription">2 comments</span>
+                      <span class="short-icondescription">2</span>
+                    </div>
+                    <div class="postedby">
+                      <span class="material-icons">
+                        person
+                      </span>
+                      <span class="full-icondescription">Posted by CoDyPhin</span>
+                      <span class="short-icondescription">CoDyPhin</span>
+                    </div>
+                    <div class="time">
+                      <span class="material-icons">
+                        access_time
+                      </span>
+                      <span class="full-icondescription">3:35 PM  27/02/2021</span>
+                      <span class="short-icondescription">3:35 PM</span>
+                    </div>
+                  </div>
+                  <div class="image">
+                    <img src="cyberpunk.png" class=".figure-img">
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <div style="display:flex; flex-direction: column; gap: 2.5vh; position: relative; top: 1.5vh;">
+            <div class="thread-card">
+              <div class="card-grid" style="position:relative;">
+                <div class="vote" style="display: flex; justify-content: center; align-items: center; ">
+                  <div>
+                    <span class="material-icons" style="font-size: 60px; display: flex; justify-content: center;">
+                      keyboard_arrow_up
+                    </span>
+                    <p style="font-size: 25px; display: flex; justify-content: center;">100</p>
+                    <span class="material-icons" style="font-size: 60px; display: flex; justify-content: center;">
+                      keyboard_arrow_down
+                    </span>
+                  </div>
+                </div>
+                <div class="title">CyberPunk 2077 Review</div>
+                <div class="text">Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. Assume the role of V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality.</div>
+                <div class="buttons">
+                  <div class="comments">
+                    <span class="material-icons">
+                      mode_comment
+                    </span>
+                    <span class="full-icondescription">2 comments</span>
+                    <span class="short-icondescription">2</span>
+                  </div>
+                  <div class="postedby">
+                    <span class="material-icons">
+                      person
+                    </span>
+                    <span class="full-icondescription">Posted by CoDyPhin</span>
+                    <span class="short-icondescription">CoDyPhin</span>
+                  </div>
+                  <div class="time">
+                    <span class="material-icons">
+                      access_time
+                    </span>
+                    <span class="full-icondescription">3:35 PM  27/02/2021</span>
+                    <span class="short-icondescription">3:35 PM</span>
+                  </div>
+                </div>
+                <div class="image">
+                  <img src="cyberpunk.png" class=".figure-img">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="newpost">
+      <div class="card">
+        <div class="card-body d-flex flex-column justify-content-center">
+            <h5 class="card-title">
+              <p>
+                Create New Post
+              </p>
+            </h5>
+            <h6 class="card-title">Want to participate in the community? Create your own post!</h6>
+            <form id="form_ask_question" name="ask_question" action="{{ url('ask_question') }}">
+                <button type="submit" class="btn btn-outline-primary w-100"> LET'S DO IT! </button>
+            </form>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body d-flex flex-column justify-content-center">
+          <h5 class="card-title">
+          <p> Top Categories</p>
+          </h5>
+          <h6 class="card-title" style="font-weight: 350; font-size: 1.25rem; position: relative; bottom: 2.5vh;">
+          <p>
+            1. Playstation 5
+          </p>
+          <p>
+            2. CyberPunk 2077
+          </p>
+          <p>
+            3. FIFA
+          </p>
+          <p>
+            4. League of Legends
+          </p>
+          <p style=" line-height: 7.5vh; font-size: 1.25rem; width: 80%; margin: 0 auto;">
+            5. Valorant
+          </p>
+          </h6>
+        </div>
+      </div>
+      <p style="text-align: center; font-size: 0.75rem;"> RNG Inc © 2021. All rights reserved </p>
+    </div>
+  </section>
+
+  <div class="newpost-short">
+    <div class="card">
+      <div class="card-body d-flex flex-column justify-content-center">
+          <h5 class="card-title">
+            <p>
+              Create New Post
+            </p>
+          </h5>
+          <h6 class="card-title">Want to participate in the community? Create your own post!</h6>
+          <form id="form_ask_question" name="ask_question" action="{{ url('ask_question') }}">
+              <button type="submit" class="btn btn-outline-primary w-100"> LET'S DO IT! </button>
+          </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
