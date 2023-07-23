@@ -37,7 +37,7 @@ This specification adheres to the OpenAPI standard using YAML.
 
 This section includes the complete API specification in OpenAPI (YAML).
 
-The link to the group's OpenAPI YAML can be found [here](https://git.fe.up.pt/lbaw/lbaw2021/lbaw2143/-/blob/master/api/rng-api.yaml).
+The link to the group's OpenAPI YAML can be found [here](https://github.com/CoDyPhin/FEUP-LBAW/blob/master/api/rng-api.yaml).
 
 For easier navigation, the link to the group's SwaggerHub generated documentation can be found [here](https://app.swaggerhub.com/apis-docs/lbaw2143/LBAW/1.0).
 
